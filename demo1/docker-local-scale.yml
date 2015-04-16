@@ -1,0 +1,14 @@
+web:
+  extends:
+    file: docker-common.yml
+    service: webapp
+  links:
+   - redis
+  environment:
+   - R_HOST=redis
+  ports:
+   - 5000
+redis:
+  image: redis
+  expose:
+   - "6379"

@@ -1,0 +1,6 @@
+webapp:
+  extends:
+    file: docker-common.yml
+    service: webapp
+  ports:
+    - "8000:5000"
